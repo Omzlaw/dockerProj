@@ -1,4 +1,4 @@
-FROM python:3.7.3-stretch
+FROM python:3.7.5
 
 #Working Directory
 WORKDIR /app
@@ -8,5 +8,5 @@ COPY . app.py /app/
 
 #Install packages from requiremnts.txt
 #hadolint igonre=DL3013
-RUN pip install --upgradevpip &&\
+RUN pip install --upgrade pip &&\
     pip install --trusted-host pypi.python.org -r requirements.txt
